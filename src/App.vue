@@ -1,10 +1,23 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <HeaderView />
+    <router-view />
+    <FooterView />
+  </div>
 </template>
+
+<script>
+import HeaderView from './layouts/HeaderView.vue'
+import FooterView from './layouts/FooterView.vue'
+export default {
+  components: { HeaderView, FooterView },
+  computed: {
+    user () {
+      return this.$store.state.user
+    }
+  }
+}
+</script>
 
 <style>
 #app {
