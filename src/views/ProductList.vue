@@ -55,8 +55,9 @@ export default {
       this.productList = await this.$api('/api/productList')
       console.log(this.productList)
     },
-    goToDetail (productId) {
-      this.$router.push({ path: '/detail', query: { product_id: productId } }xx)
+    // eslint-disable-next-line camelcase
+    goToDetail (product_id) {
+      this.$router.push({ path: '/detail', query: { product_id: product_id } })
     }
   }
 }
