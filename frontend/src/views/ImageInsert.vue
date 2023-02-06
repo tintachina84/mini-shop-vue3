@@ -103,7 +103,7 @@ export default {
     }
   },
   created () {
-    this.productId = this.$route.query.product_id;
+    this.productId = this.$route.query.product_id
     this.getProductDetail()
     this.getProductImage()
   },
@@ -141,7 +141,7 @@ export default {
         }
       })
     },
-    async uploadFile(files, type) {
+    async uploadFile (files, type) {
       let name = ''
       let data = null
       if (files) {

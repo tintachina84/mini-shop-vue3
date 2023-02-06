@@ -117,7 +117,7 @@ export default {
     this.getCategoryList()
   },
   mounted () {
-    if (this.user.email == undefined) {
+    if (this.user.email === undefined) {
       alert('로그인을 해야 이용할 수 있습니다.')
       this.$router.push({ path: '/' })
     }
@@ -162,7 +162,7 @@ export default {
       // this.cate1
       this.category3 = []
       const categoryList = this.categoryList.filter(c => {
-        return c.category1 == this.cate1
+        return c.category1 === this.cate1
       })
 
       const oCategory2 = {}
